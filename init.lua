@@ -14,7 +14,7 @@ minetest.register_chatcommand("sudo", {
 				if minetest.get_player_by_name(target) then
 					if arguments == "" then argumentsdisp = arguments else argumentsdisp = " " .. arguments end
 					local rs, rt = cmddef[command].func(target, arguments)
-					minetest.chat_send_player(target, name .. "used the `sudo` command on you.")
+					minetest.chat_send_player(target, name .. " used the `sudo` command on you.")
 					minetest.chat_send_player(target, "Command returns: " .. (tostring(rt) or "No return texts"))
 					return rs, "Command returns: " .. (tostring(rt) or "No return texts")
 				else
